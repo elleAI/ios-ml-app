@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MachineLearningTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io9-ql-GqS">
+                                <rect key="frame" x="153.5" y="318.5" width="68" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rCd-kP-rj7"/>
+                                </constraints>
+                                <state key="normal" title="Try it Out!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startProcess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vaq-le-CMn"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86S-f2-XFs">
+                                <rect key="frame" x="15" y="621.5" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ps-Jw-vWj">
+                                <rect key="frame" x="15" y="15" width="345" height="30"/>
+                                <state key="normal" title="Choose Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="repeatProcess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RsU-Qg-DRg"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-HF-zBD">
+                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="CJ5-Pm-nle"/>
+                                    <constraint firstAttribute="height" constant="200" id="Ok9-kj-MZF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="86S-f2-XFs" secondAttribute="bottom" constant="25" id="A1F-fE-caa"/>
+                            <constraint firstItem="8cb-HF-zBD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="A4f-bY-R0F"/>
+                            <constraint firstItem="Io9-ql-GqS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="E6D-aP-zn4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86S-f2-XFs" secondAttribute="trailing" constant="15" id="Lqb-rc-beP"/>
+                            <constraint firstItem="8cb-HF-zBD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UM8-Dc-ROA"/>
+                            <constraint firstItem="Io9-ql-GqS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="czC-F6-Haw"/>
+                            <constraint firstItem="86S-f2-XFs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8cb-HF-zBD" secondAttribute="bottom" constant="15" id="fMa-Zv-iJO"/>
+                            <constraint firstItem="7ps-Jw-vWj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jTh-Ny-VJF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ps-Jw-vWj" secondAttribute="trailing" constant="15" id="lfk-uI-EN6"/>
+                            <constraint firstItem="7ps-Jw-vWj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="15" id="pXE-uP-OTL"/>
+                            <constraint firstItem="8cb-HF-zBD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7ps-Jw-vWj" secondAttribute="bottom" constant="15" id="qOz-p7-38c"/>
+                            <constraint firstItem="86S-f2-XFs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="vvg-nv-U9P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classifierLabel" destination="86S-f2-XFs" id="yqr-5O-Vma"/>
+                        <outlet property="imageContainer" destination="8cb-HF-zBD" id="ipn-K3-Ikc"/>
+                        <outlet property="repeatButton" destination="7ps-Jw-vWj" id="DuG-f4-XML"/>
+                        <outlet property="startButton" destination="Io9-ql-GqS" id="04W-g9-pH5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
