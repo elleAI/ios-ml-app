@@ -12,7 +12,7 @@ To get you started you will need to clone this repository, by running
 git clone https://github.com/elleAI/ios-ml-app.git
 
 ```
-After cloning the project download the folder /models from this [dropbox link](https://www.dropbox.com/sh/nbopbot03e5hr0o/AAAHeps1wOehKKGj6SK4ZGyTa?dl=0) and place it in the folder structure next to Datasets and the iOS Application.
+After cloning the project download the folder models from this [dropbox link](https://www.dropbox.com/sh/nbopbot03e5hr0o/AAAHeps1wOehKKGj6SK4ZGyTa?dl=0) and place it in the folder structure next to Datasets and the MachineLearningTutorial Folders.
 
 These are the trained models and also the mlmodel for the iOS Application.
 
