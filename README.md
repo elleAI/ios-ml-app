@@ -13,8 +13,7 @@ git clone https://github.com/elleAI/ios-ml-app.git
 
 ```
 After cloning the project download the folder models from this [dropbox link](https://www.dropbox.com/sh/nbopbot03e5hr0o/AAAHeps1wOehKKGj6SK4ZGyTa?dl=0) and place it in the folder structure next to Datasets and the MachineLearningTutorial Folders.
-
-These are the trained models and also the mlmodel for the iOS Application.
+This folder contains the trained models and also the mlmodel for the iOS Application.
 
 Be sure to have all the prerequisites installed with correct versions and then run the script algorithmFlowManager.py, from more details visit the tutorial.
 
