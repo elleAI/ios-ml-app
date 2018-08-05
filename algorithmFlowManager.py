@@ -14,17 +14,19 @@ def getFolderPath():
 trainingDir = os.path.join(getFolderPath(), "datasets","trainDataset/")
 transferLearningDir = os.path.join(getFolderPath(), "datasets","transferLearningDataset/")
 
-# Performs the transfer Learning
-def performTransferLearning():
-    seperateDataset.createDatasetFolders(transferLearningDir)
-    xtrain, xtest, ytrain, ytest = readDataset.loadData(transferLearningDir, False)
-    transferLearning.performTransferLearning(xtrain, xtest, ytrain, ytest, os.path.join(getFolderPath(), "models"))
-
 # Performs the initial training
 def performTrainingCNN():
     seperateDataset.createDatasetFolders(trainingDir)
     xtrain, xtest, ytrain, ytest = readDataset.loadData(trainingDir, True)
-    cnn.trainCNN(xtrain, xtest, ytrain, ytest, os.path.join(getFolderPath(), "models"))
+    modelPath = os.path.join(getFolderPath(), "models")
+    cnn.trainCNN(xtrain, xtest, ytrain, ytest, modelPath)
+
+# Performs the transfer Learning
+def performTransferLearning():
+    seperateDataset.createDatasetFolders(transferLearningDir)
+    xtrain, xtest, ytrain, ytest = readDataset.loadData(transferLearningDir, False)
+    modelPath = os.path.join(getFolderPath(), "models")
+    transferLearning.performTransferLearning(xtrain, xtest, ytrain, ytest, modelPath)
 
 # Saves the trained model to .mlmodel format
 def saveCoreMLModel():
@@ -33,7 +35,7 @@ def saveCoreMLModel():
 # To start the whole process, call this function
 def start():
     performTrainingCNN()
-    #performTransferLearning()
-    #saveCoreMLModel()
+    performTransferLearning()
+    saveCoreMLModel()
 
 start()

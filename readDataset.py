@@ -11,17 +11,20 @@ def loadData(path, isModelInTrainingPhase):
     ytrain = []
     ytest = []
     for folder in os.listdir(path):
-        for subfolder in os.listdir(path+"/" +folder):
+        for subfolder in os.listdir(path + "/" +folder):
+            subfolderPath = path + "/" + folder + "/" + subfolder
             if subfolder == "test":
-                for image in os.listdir(path + "/" + folder + "/" + subfolder):
+                for image in os.listdir(subfolderPath):
                     if image.endswith(".jpg"):
-                        img = Image.open(path+ "/" +folder+"/" +subfolder+"/" +image)
+                        imagePath = subfolderPath + "/" + image
+                        img = Image.open(imagePath)
                         xtest.append(array(img))
                         ytest.append(folderTitleToInt(folder, isModelInTrainingPhase))
             elif subfolder == "train":
-                for image in os.listdir(path + "/" + folder + "/" + subfolder):
+                for image in os.listdir(subfolderPath):
+                    imagePath = subfolderPath + "/" + image
                     if image.endswith(".jpg"):
-                        img = Image.open(path + "/" + folder + "/" + subfolder + "/" + image)
+                        img = Image.open(imagePath)
                         xtrain.append(array(img))
                         ytrain.append(folderTitleToInt(folder, isModelInTrainingPhase))
 
@@ -40,8 +43,8 @@ def loadData(path, isModelInTrainingPhase):
     return xtrain, xtest, ytrain, ytest
 
 # Returns the class label as int
-def folderTitleToInt(folder, trainingStep):
-    if trainingStep == True:
+def folderTitleToInt(folder, isModelInTrainingPhase):
+    if isModelInTrainingPhase == True:
         return fetchLabelsForTraining(folder)
     else:
         return fetchLabelsForTransferLearning(folder)

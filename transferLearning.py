@@ -15,7 +15,7 @@ def performTransferLearning(xtrain, xtest, ytrain, ytest, modelPath):
 
     model.compile(loss='categorical_crossentropy',
                   optimizer='adam', metrics=['accuracy'])
-    model.fit(x_train, y_train, validation_data=(x_validation, y_validation), epochs=30, batch_size=5)
+    model.fit(x_train, y_train, validation_data=(x_validation, y_validation), epochs=30, batch_size=10)
 
     model.evaluate(xtest, ytest)
     # Save the model
