@@ -2,7 +2,7 @@
 
 This project contains Convolutional Neural Network (CNN) model, trained with a dataset of flowers images.
 Furthermore, this model was retrained with the technique of transfer learning for 3 new categories of images and converted to mlmodel that is connected with a simple iOS Application for testing out the results of the training.
-For more in-depth explanation you can visit the [tutorial](https://pusher.com/tutorials/ios-machine-learning)
+For more in-depth explanation you can visit the [tutorial](https://pusher.com/tutorials/ios-machine-learning).
 
 ## Getting Started
 
